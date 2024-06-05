@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_card_w_desc_card_w_descs",
+  "info": {
+    "displayName": "card_w_desc",
+    "icon": "folder"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sub_title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "richtext"
+    }
+  }
+}

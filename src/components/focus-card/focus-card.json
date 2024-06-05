@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_focus_card_focus_cards",
+  "info": {
+    "displayName": "Focus Card",
+    "icon": "command",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "richtext"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "link.link"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "offer_title": {
+      "type": "string"
+    },
+    "offer_desc": {
+      "type": "richtext"
+    },
+    "offer_link": {
+      "displayName": "link",
+      "type": "component",
+      "repeatable": false,
+      "component": "link.link"
+    },
+    "offer_items": {
+      "displayName": "card",
+      "type": "component",
+      "repeatable": true,
+      "component": "card.card"
+    },
+    "data_title": {
+      "type": "string"
+    },
+    "data_items": {
+      "displayName": "card_w_desc",
+      "type": "component",
+      "repeatable": true,
+      "component": "card-w-desc.card-w-desc"
+    },
+    "about_title": {
+      "type": "string"
+    },
+    "about_desc": {
+      "type": "richtext"
+    },
+    "about_link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "link.link"
+    },
+    "about_youtube": {
+      "type": "string"
+    },
+    "focus_title": {
+      "type": "string"
+    },
+    "focus_card": {
+      "displayName": "Focus Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "focus-card.focus-card"
+    },
+    "partner_title": {
+      "type": "string"
+    },
+    "partner_items": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "team_title": {
+      "type": "string"
+    },
+    "team_items": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
