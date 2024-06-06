@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_title_desc_title_descs",
+  "info": {
+    "displayName": "title_desc",
+    "icon": "eye"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "richtext"
+    }
+  }
+}

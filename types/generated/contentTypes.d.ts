@@ -362,56 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiHomepageHomepage extends Schema.SingleType {
-  collectionName: 'homepages';
-  info: {
-    singularName: 'homepage';
-    pluralName: 'homepages';
-    displayName: 'Homepage';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    heading: Attribute.RichText;
-    offer_title: Attribute.String;
-    offer_desc: Attribute.RichText;
-    offer_link: Attribute.Component<'link.link'>;
-    offer_items: Attribute.Component<'card.card', true>;
-    data_title: Attribute.String;
-    data_items: Attribute.Component<'card-w-desc.card-w-desc', true>;
-    about_title: Attribute.String;
-    about_desc: Attribute.RichText;
-    about_link: Attribute.Component<'link.link'>;
-    about_youtube: Attribute.String;
-    focus_title: Attribute.String;
-    focus_card: Attribute.Component<'focus-card.focus-card', true>;
-    partner_title: Attribute.String;
-    partner_items: Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    team_title: Attribute.String;
-    team_items: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::homepage.homepage',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::homepage.homepage',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -838,6 +788,105 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutAbout extends Schema.SingleType {
+  collectionName: 'abouts';
+  info: {
+    singularName: 'about';
+    pluralName: 'abouts';
+    displayName: 'About';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.String;
+    heading_items: Attribute.Component<'card.card', true>;
+    heading_sub: Attribute.RichText;
+    heading_link: Attribute.Component<'link.link'>;
+    process_title: Attribute.String;
+    process_desc: Attribute.RichText;
+    process_media: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    vision_title: Attribute.String;
+    vision_desc: Attribute.RichText;
+    vision_link: Attribute.Component<'link.link'>;
+    vision_youtube: Attribute.String;
+    values_title: Attribute.String;
+    values_items: Attribute.Component<'title-desc.title-desc', true>;
+    pillar_title: Attribute.String;
+    pillar_desc: Attribute.RichText;
+    pillar_media: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    team_title: Attribute.String;
+    team_desc: Attribute.RichText;
+    team_items: Attribute.Component<'team-card.team-card', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomepageHomepage extends Schema.SingleType {
+  collectionName: 'homepages';
+  info: {
+    singularName: 'homepage';
+    pluralName: 'homepages';
+    displayName: 'Homepage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    offer_title: Attribute.String;
+    offer_desc: Attribute.RichText;
+    offer_link: Attribute.Component<'link.link'>;
+    offer_items: Attribute.Component<'card.card', true>;
+    data_title: Attribute.String;
+    data_items: Attribute.Component<'card-w-desc.card-w-desc', true>;
+    about_title: Attribute.String;
+    about_desc: Attribute.RichText;
+    about_link: Attribute.Component<'link.link'>;
+    about_youtube: Attribute.String;
+    focus_title: Attribute.String;
+    focus_card: Attribute.Component<'focus-card.focus-card', true>;
+    partner_title: Attribute.String;
+    partner_items: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    team_title: Attribute.String;
+    team_items: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::homepage.homepage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::homepage.homepage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -848,7 +897,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::homepage.homepage': ApiHomepageHomepage;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -857,6 +905,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::about.about': ApiAboutAbout;
+      'api::homepage.homepage': ApiHomepageHomepage;
     }
   }
 }

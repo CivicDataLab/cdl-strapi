@@ -1,0 +1,100 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "heading_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "card.card"
+    },
+    "heading_sub": {
+      "type": "richtext"
+    },
+    "heading_link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "link.link"
+    },
+    "process_title": {
+      "type": "string"
+    },
+    "process_desc": {
+      "type": "richtext"
+    },
+    "process_media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "vision_title": {
+      "type": "string"
+    },
+    "vision_desc": {
+      "type": "richtext"
+    },
+    "vision_link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "link.link"
+    },
+    "vision_youtube": {
+      "type": "string"
+    },
+    "values_title": {
+      "type": "string"
+    },
+    "values_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "title-desc.title-desc"
+    },
+    "pillar_title": {
+      "type": "string"
+    },
+    "pillar_desc": {
+      "type": "richtext"
+    },
+    "pillar_media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "team_title": {
+      "type": "string"
+    },
+    "team_desc": {
+      "type": "richtext"
+    },
+    "team_items": {
+      "displayName": "Team Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "team-card.team-card"
+    }
+  }
+}
